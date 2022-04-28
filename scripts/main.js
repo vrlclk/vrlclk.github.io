@@ -16,7 +16,7 @@ myImage.onclick = function() {
 }
 
 let myButton = document.querySelector('button');
-let myHeading = document.querySelector('h1');
+let myHeading = document.querySelector('p.greeting');
 
 // Sets a given name in a heading
 function setUserName(){
@@ -26,10 +26,8 @@ function setUserName(){
     if(!myName){ // equivalent to (myName === '')
         //myHeading.textContent = 'Penguin sheriff takes over this website.';
         setUserName();
-    }else if (lastLetter === 's'){
-        myHeading.textContent = 'Penguin sheriff takes over ' + myName + '\' website.';
     }else{
-        myHeading.textContent = 'Penguin sheriff takes over ' + myName + '\'s website.';
+        myHeading.textContent = 'Welcome, ' + myName + '!';
     }
 }
 
@@ -38,7 +36,7 @@ if (!localStorage.getItem('name')){
     setUserName();
 }else{
     let storedName = localStorage.getItem('name');
-    myHeading.textContent = 'Penguin sheriff takes over this website.';
+    myHeading.textContent = 'Welcome, visitor!';
 }
 
 // Enables the username function by clicking a button
