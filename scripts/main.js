@@ -24,7 +24,6 @@ function setUserName(){
     localStorage.setItem('name', myName);
     let lastLetter = myName.charAt(myName.length - 1);
     if(!myName){ // equivalent to (myName === '')
-        //myHeading.textContent = 'Penguin sheriff takes over this website.';
         setUserName();
     }else{
         myHeading.textContent = 'Welcome, ' + myName + '!';

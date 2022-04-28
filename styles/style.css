@@ -19,12 +19,28 @@ body{
     border: 5px solid black;
 }
 
+header{
+    display: flex;
+    justify-content: space-between;
+}
+p.greeting{
+    text-align: left;
+}
+p.time{
+    text-align: right;
+}
+
+hr{
+    border: 1px solid #1b1b1b;
+}
+
 h1{
     margin: 0;
     padding: 20px 0;
     color: #a8a8a8;
     /* horizontal | vertical | blur radius | color */
     text-shadow: 3px 3px 1px black;
+    text-align: center;
 }
 
 h2{
@@ -36,13 +52,6 @@ p, li{
     line-height: 2;
     letter-spacing: 1px;
 }
-
-/* For classes use the dot before the name 
-.center{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}*/
 
 img{
     /*img is a block element, therefore this declaration is required*/
