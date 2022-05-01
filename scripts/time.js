@@ -1,3 +1,9 @@
+function liveDate(){
+    let date = new Date();
+    let showDate = document.querySelector('p.date');
+    showDate.innerHTML = date.toLocaleDateString();
+}
+
 function liveTime(){
     let time = new Date();
     console.log(time);
@@ -6,4 +12,5 @@ function liveTime(){
     showTime.innerHTML = time.toLocaleTimeString();
 }
 
+setInterval(liveDate, 1000);
 setInterval(liveTime, 1000);

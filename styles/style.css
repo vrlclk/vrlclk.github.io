@@ -26,6 +26,10 @@ header{
 p.greeting{
     text-align: left;
 }
+p.date{
+    text-align: center;
+}
+
 p.time{
     text-align: right;
 }
@@ -77,4 +81,8 @@ img{
     /*img is a block element, therefore this declaration is required*/
     display: block;
     margin: 0 auto;
+}
+
+p.credits{
+    font-size: x-small;
 }
