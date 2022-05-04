@@ -1,5 +1,3 @@
-const myHeading = document.querySelector('h1');
-myHeading.textContent = 'Penguin sheriff takes over this website.js';
 console.log('Hello world');
 
 // Example of an if-statement
@@ -29,6 +27,3 @@ console.log( divide(64, 8) );
 console.log( divide(64, 0) );
 console.log( divide(0, 8) );
 console.log( divide(6.4, 8) );
-
-// An anonymous function
-document.querySelector('img').addEventListener('click', function() {alert('Put your hands up, little buddy!')});
