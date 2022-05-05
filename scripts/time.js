@@ -6,7 +6,7 @@ function liveDate(){
 
 function liveTime(){
     let time = new Date();
-    console.log(time);
+    //console.log(time);
 
     let showTime = document.querySelector('p.time');
     showTime.innerHTML = time.toLocaleTimeString();

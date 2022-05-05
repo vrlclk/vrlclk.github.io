@@ -34,20 +34,28 @@ p.time{
     text-align: right;
 }
 
-ul{
+div.navigator ul{
     display: flex;
     list-style-type: none;
     background-color: #5a5a5a;
 }
-li{
+div.abbreviations ul{
+    display: flex;
+    list-style-type:none;
+}
+div.navigator li, div.abbreviations li{
     font-size: 16px;
     line-height: 2;
     letter-spacing: 1px;
     padding: 0px 5px 0px 5px;
 }
-a:link, a:visited{
+div.navigator a:link{
     color: white;
     text-decoration: none;
+}
+a:link, a:visited{
+    color: white;
+    /*text-decoration: none;*/
 }
 a:hover{
     background-color: #a8a8a8;
@@ -69,6 +77,8 @@ h1{
 
 h2{
     text-align: center;
+    font-size: 24px;
+    text-shadow: 3px 3px 1px black;
 }
 
 p, article{
@@ -78,7 +88,8 @@ p, article{
 }
 
 img{
-    /*img is a block element, therefore this declaration is required*/
+    /* img is a block element, therefore this declaration is required */
+    /* Sets the picture on the center */
     display: block;
     margin: 0 auto;
     max-width: 100%;
@@ -87,4 +98,19 @@ img{
 
 p.credits{
     font-size: x-small;
+}
+
+dt{
+    font-size: 16px;
+}
+dd{
+    font-size: 14px;
+}
+
+address.imprint p{
+    font-size: 8px;
+}
+
+code{
+    font-size: 16px;
 }

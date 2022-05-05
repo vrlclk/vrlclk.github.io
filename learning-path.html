@@ -4,7 +4,7 @@
         <meta charset="utf-8" />
         <meta name="author" content="vrlc96" />
         <meta name="viewport" content="width=device-width" />
-        <title>Welcome to my page</title>
+        <title>Advanced text formatting in HTML</title>
         <link rel="icon" href="/images/AUGH.png" />
         <link rel="stylesheet" href="/styles/style.css" />
         <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
@@ -18,7 +18,7 @@
         </header>
 
         <main>
-            <div class="navigtor">
+            <div class="navigator">
                 <ul>
                     <li> <a href="/index.html"> Homepage </a> </li>
                     <li> <a href="/introduction.html"> Example </a> </li>
@@ -31,8 +31,151 @@
                 </ul>
             </div>
             <hr />
-            <img src="/images/baustelle.png" alt="A construction site sign">
-            <p style="text-align: center; font-size: xx-large; ">THIS SITE IS UNDER CONSTRUCTION</p>
+            <h1>Advanced text formatting in <abbr title="Hypertext Markup Language">HTML</abbr></h1>
+            <p>Here are some examples of advanced text formatting based on MDN WebDocs</p>
+            <h2>Description lists</h2>
+            <p style="text-shadow: 3px 3px 1px black;"><abbr title="Open Systems Interconnection">OSI</abbr> Reference Model</p>
+            <!--Used for terms and definitions, questions and answers-->
+            <dl>
+                <dt>7. Application Layer</dt>
+                    <dd>High-level APIs, including resource sharing, remote file access</dd>
+                <dt>6. Presentation Layer</dt>
+                    <dd>Translation of data between a networking service and an application; including character encoding, data compression and encryption/decryption</dd>
+                <dt>5. Session Layer</dt>
+                    <dd>Managing communication sessions, i.e., continuous exchange of information in the form of multiple back-and-forth transmissions between two nodes</dd>
+                <dt>4. Transport Layer</dt>
+                    <dd>Segment, Datagram	Reliable transmission of data segments between points on a network, including segmentation, acknowledgement and multiplexing</dd>
+                <dt>3. Network Layer</dt>
+                    <dd>Packet	Structuring and managing a multi-node network, including addressing, routing and traffic control</dd>
+                <dt>2. Data Link Layer</dt>
+                    <dd>Frame	Reliable transmission of data frames between two nodes connected by a physical layer</dd>
+                <dt>1. Physical Layer</dt>
+                    <dd>Bit, Symbol	Transmission and reception of raw bit streams over a physical medium</dd>
+            </dl>
+            <hr />
+            <h2>Blockquote and inline quotations</h2>
+            <p>Here are some blockquote examples:</p>
+            <p>According to the <a href="/en-US/docs/Web/HTML/Element/blockquote"><cite>MDN blockquote page</cite></a>:</p>
+            <blockquote cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote">
+                <p>The <strong>HTML <code>&lt;blockquote&gt;</code> Element</strong> (or <em>HTML Block Quotation Element</em>) indicates that  the enclosed text is an extended quotation.</p>
+            </blockquote>
+
+            <p>The big juicer said once:</p>
+            <blockquote cite="https://www.youtube.com/watch?v=CadBU_gio0c">
+                <p><q><em>Jam a man of fortune, and J must seek my fortune. -Henry Aeveries, 1994</em></q></p>
+            </blockquote>
+            <iframe width="560" height="315" style="display: block; margin: 0 auto;" src="https://www.youtube.com/embed/CadBU_gio0c" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope" allowfullscreen></iframe>
+
+            <p>Hello and welcome to my motivation page. As <a href="http://www.brainyquote.com/quotes/authors/c/confucius.html"><cite>Confucius' quotes site</cite></a> says:</p>
+
+            <blockquote cite="http://www.brainyquote.com/quotes/authors/c/confucius.html">
+            <p>It does not matter how slowly you go as long as you do not stop.</p>
+            </blockquote>
+
+            <p>I also love the concept of positive thinking, and <q cite="http://example.com/affirmationsforpositivethinking">The Need To Eliminate Negative Self Talk</q> (as mentioned in <a href="http://example.com/affirmationsforpositivethinking"><cite>Affirmations for Positive Thinking</cite></a>.)</p>
+
+            <hr />
+
+            <h2>Abbreviations</h2>
+            <p>Hover over the abbreviations to see the full expansion of the term.</p>
+            <div class="abbreviations">
+                <ul>
+                    <li><abbr title="Hypertext Transfer Protocol (Secure)">HTTP(S)</abbr></li>
+                    <li><abbr title="Transmission Control Protocol">TCP</abbr></li>
+                    <li><abbr title="Internet Protocol">IP</abbr></li>
+                    <li><abbr title="Domain Name System">DNS</abbr></li>
+                    <li><abbr title="Dynamic Host Configuration Protocol">DHCP</abbr></li>
+                    <li><abbr title="Cascading Style Sheets">CSS</abbr></li>
+                    <li><abbr title="World Wide Web">WWW</abbr></li>
+                    <li><abbr title="Simple Mail Transfer Protocol">SMTP</abbr></li>
+                    <li><abbr title="Fiber To The Home">FTTH</abbr></li>
+                    <li><abbr title="Long Term Evolution">LTE</abbr></li>
+                    <li>
+                        <a href="https://en.wikipedia.org/wiki/XQc#Career" target="_blank"><abbr title="Feli(X) (Q)uebe(C)"><cite>XQC</cite></abbr></a>
+                    </li>
+                </ul>
+            </div>
         </main>
+        <hr/>
+        <h2>Subscript and superscript</h2>
+        <p><u>A superscript example:</u> My birthday is on March 3<sup>rd</sup>, 1996.</p>
+        <p><u>A subscript example:</u> The chemical formula of water or Dihydrogen Oxide is H<sub>2</sub>O.</p>
+
+        <hr />
+
+        <h2>Coding example using the HTML elements <code>&lt;pre&gt;</code>, <code>&lt;code&gt;</code>, <code>&lt;var&gt;</code> and <code>&lt;kbd&gt;</code></h2>
+        <p>This is how you write a "Hello, World!" function in Python:</p>
+        <code>print('Hello, World!');</code>
+        <p>And this is how you write it in Java:</p>
+<pre><code>
+public class Hello{
+    public static void main(String[] args){
+        System.out.println("Hello, World!"):
+    }
+}</code></pre>
+        <p>In both of the examples, we can't find a single variable because we don't need one but you can declare a variable and output it like this:</p>
+<pre><code>
+public class Hello{
+    public static void main(String[] args){
+        String sentence = "Hello, World!"
+        System.out.println(sentence):
+    }
+}</code></pre>
+        <p>Here we have a variable called <var>sentence</var> which has the value <code>Hello, World!</code> and we can output it in the <code>println</code> function.</p>
+
+        <strong style="color: red; font-size: 20px;">PROTIP!</strong>
+        <p>Always save your code with <kbd>Ctrl+S</kbd> if you do any changes. You can still use the Undo and Redo key combinations <kbd>Ctrl+Z</kbd> and <kbd>Ctrl+Y</kbd> to revert or set the changes back.</p>
+
+        <hr />
+
+        <h2>A command example in Windows using <code>&lt;samp&gt;</code></h2>
+        <p>If you want to list all the files and folders/directories in Windows using a Terminal like <em>cmd</em> or <em>powershell</em> you can use the commands <code>dir</code> and <code>ls</code> (powershell only)</p>
+<pre>
+$ <kbd>dir</kbd>
+<samp>
+    Volume in Laufwerk C: hat keine Bezeichnung.
+    Volumeseriennummer: C2D8-0564
+   
+    Verzeichnis von C:\Users\vrlc\Desktop
+   
+   02.05.2022  00:00    &lt;DIR&gt;          .
+   02.05.2022  00:00    &lt;DIR&gt;          ..
+   29.04.2022  16:57           260.042 blue.txt
+   29.04.2022  15:44         1.451.912 elements.txt
+   30.04.2022  13:50        23.456.586 Epson_Stylus_SX230-SX235W-SX430W-SX440W-series.pdf
+   02.05.2022  00:00           652.993 frontend.pdf
+   28.04.2022  13:57             2.407 GitHub Desktop.lnk
+   04.05.2022  12:40    &lt;DIR&gt;          Memes
+   30.04.2022  13:51         2.122.712 sx435w.pdf</samp>
+</pre>
+        <hr />
+        <h2>Date in HTML</h2>
+        <!-- Standard simple date -->
+        <time datetime="2016-01-20">20 January 2016</time><br />
+        <!-- Just year and month -->
+        <time datetime="2016-01">January 2016</time><br />
+        <!-- Just month and day -->
+        <time datetime="01-20">20 January</time><br />
+        <!-- Just time, hours and minutes -->
+        <time datetime="19:30">19:30</time><br />
+        <!-- You can do seconds and milliseconds too! -->
+        <time datetime="19:30:01.856">19:30:01.856</time><br />
+        <!-- Date and time -->
+        <time datetime="2016-01-20T19:30">7.30pm, 20 January 2016</time><br />
+        <!-- Date and time with timezone offset -->
+        <time datetime="2016-01-20T19:30+01:00">7.30pm, 20 January 2016 is 8.30pm in France</time><br />
+        <!-- Calling out a specific week number -->
+        <time datetime="2016-W04">The fourth week of 2016</time><br />
+        <hr />
+        <footer>
+            <address class="imprint">
+                <h3>Imprint</h3>
+                <p>
+                    Vrl C<br />
+                    Gelsenkirchen<br />
+                    Germany
+                </p>
+            </address>
+        </footer>
     </body>
 </html>
