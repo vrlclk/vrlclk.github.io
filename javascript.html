@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+        <meta name="author" content="vrlc96" />
+        <meta name="description" content="This is an attempt to learn Front-End web development with MDN Webdocs. The learner wants to be a web developer so he started with the basics, following the guide that it is offering to anyone in the world." />
+        <meta name="viewport" content="width=device-width" />
+        <title>Javascript playground</title>
+        <link rel="icon" href="/images/AUGH.png" />
+        <link rel="stylesheet" href="/styles/style.css" />
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
+
+        <style>
+            .hideUnderline{
+                text-decoration: none;
+            }
+            .dom{
+                /* able to use line breaks with textContent */
+                white-space: pre-line;
+            }
+        </style>
+
+        <script src="/scripts/time.js" defer></script>
+</head>
+<body>
+    <header>
+        <p class="date"></p>
+        <p class="time"></p>
+    </header>
+
+    <main>
+        <div class="navigator">
+            <ul>
+                <li> <a href="/index.html"> Homepage </a> </li>
+                <li> <a href="/introduction.html"> Example </a> </li>
+                <li> <a href="/learning-path.html"> Progress </a> </li>
+                <li> <a href="/javascript.html"> Javascript </a> </li>
+            </ul>
+        </div>
+
+        <h1>Javascript playground</h1>
+        <h2 class="output">Experimenting with the <abbr class="hideUnderline" title="Document Object Model">DOM</abbr> API</h2>
+        <section class="dom"></section>
+
+        <hr>
+
+        <section class="list">
+            <h2>My list</h2>
+            <div>
+                <label for="item">Enter an item:</label>
+                <input type="text" name="item" class="item" />
+                <button>Add item</button>
+            </div>
+    
+            <ul>
+    
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+
+    </footer>
+
+    <script>
+        // method to add HTML elements in the div
+        const dom = document.querySelector('.dom');
+
+        // creating an element in the div
+        const testing = document.createElement('p');
+        testing.textContent = 'Testing, testing, 1, 2, 3?!\r\nDid the line break work?';
+        testing.textContent += '\r\nWill this overwrite the previous one? Nope, it doesn\'t. Good 👍';
+        dom.appendChild(testing);
+
+        /*************************************************************************************************/
+        const list = document.querySelector('.list ul');
+        const input = document.querySelector('.list input');
+        const addItem = document.querySelector('.list button');
+
+        addItem.addEventListener('click', () => {
+            const item = input.value;
+            input.value = '';
+
+            const listItem = document.createElement('li');
+            const span = document.createElement('span');
+            const deleteItem = document.createElement('button');
+
+            listItem.appendChild(span);
+            span.textContent = item + '\t';
+            listItem.appendChild(deleteItem);
+            deleteItem.textContent = 'Delete';
+            list.appendChild(listItem);
+
+            deleteItem.addEventListener('click', () => {
+                list.removeChild(listItem);
+            });
+
+            input.focus();
+        });
+    </script>
+</body>
+</html>
