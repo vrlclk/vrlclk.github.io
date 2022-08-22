@@ -18,6 +18,10 @@
                 /* able to use line breaks with textContent */
                 white-space: pre-line;
             }
+            .fetch p{
+                font-family: 'Times New Roman', serif;
+                font-size: 14px;
+            }
         </style>
 
         <script src="/scripts/time.js" defer></script>
@@ -56,6 +60,27 @@
     
             </ul>
         </section>
+
+        <hr>
+
+        <section class="fetch">
+            <form>
+                <label for="verse-choose">Choose a quote</label>
+                <select name="verse-choose" id="verse-choose">
+                    <option>Quote 1</option>
+                    <option>Quote 2</option>
+                    <option>Quote 3</option>
+                </select>
+
+                <h3>xQc quotes</h3>
+
+                <p></p>
+            </form>
+        </section>
+
+        <hr>
+
+
     </main>
 
     <footer>
@@ -97,6 +122,33 @@
 
             input.focus();
         });
+
+        /************************************************************************/
+        const chooseQuote = document.querySelector('.fetch select');
+        const displayQuote = document.querySelector('.fetch p');
+
+        chooseQuote.addEventListener('change', () => {
+            const quote = chooseQuote.value;
+            updateDisplay(quote);
+        });
+        
+        function updateDisplay(quote){
+            quote = quote.replace('Quote ','xqc');
+            const url = `/verses/${quote}.txt`;
+
+            fetch(url)
+                .then((response) => {
+                    if(!response.ok){
+                        throw new Error(`HTTP error: ${response.status}`);
+                    }
+                    return response.text();
+                })
+                .then((text) => displayQuote.textContent = text)
+            .catch((error) => displayQuote.textContent = `Could not fetch quote: ${error}`);
+        }
+
+        updateDisplay('Quote 1');
+        chooseQuote.value = 'Quote 1';
     </script>
 </body>
 </html>
