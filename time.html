@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--<meta http-equiv="X-UA-Compatible" content="IE=edge">-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uhrzeit</title>
+    <style>
+        html{
+            background-color: black;
+        }
+        #container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 98vh;
+        }
+        .time{
+            font-family: 'Arial';
+            font-size: 20vw;
+            color: white;
+            user-select: none;
+        }
+    </style>
+</head>
+<body>
+    <a href="https://time.is/Gelsenkirchen" id="time_is_link" rel="nofollow"></a>
+
+    <div id="container">
+        <span id="Gelsenkirchen_z704" class="time"></span>
+    </div>
+
+    <script src="//widget.time.is/t.js"></script>
+
+    <script>
+        time_is_widget.init({Gelsenkirchen_z704:{}});
+    </script>
+</body>
+</html>
