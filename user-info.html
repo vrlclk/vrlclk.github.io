@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User form</title>
+    <style>
+        html{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        header{
+            text-align: center;
+        }
+
+        fieldset{
+            margin: 10px 0;
+        }
+
+        form{
+            margin: 0 auto;
+            padding: 1em;
+        }
+
+        ul{
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        label{
+            display: inline-block;        
+            width: 110px;
+            text-align: right;
+        }
+
+        .gender-label{
+            width: inherit;
+        }    
+        
+        li{
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>User form</h1>
+        <p>Fill in the form</p>
+    </header>
+    
+    <form action="">
+        <fieldset>
+            <legend>Personaldaten</legend>
+            <ul>
+                <li>
+                    <label for="first-name">Vorname:</label>
+                    <input type="text" id="first-name" name="first-name" />
+                </li>
+                
+                <li>
+                    <label for="middle-name">Zusatzname:</label>
+                    <input type="text" id="middle-name" name="middle-name" />
+                </li>
+                <li>
+                    <label for="last-name">Nachname:</label>
+                    <input type="text" id="last-name" name="last-name" />
+                </li>
+                <li>
+                    <label for="birth-day">Geburtstag:</label>
+                    <input type="date" id="birth-day" name="birth-day" style="width:172px;" />
+                </li>
+                <li>
+                    <label for="birth-place">Geburtsort:</label>
+                    <input type="text" id="birth-place" name="birth-place" />
+                </li>
+                <li>
+                    <!-- set name="gender" on every radio button to group it -->
+                    <label for="gender">Geschlecht:</label>
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label for="male" class="gender-label">männlich</label>
+                    
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female" class="gender-label">weiblich</label>
+                    
+                    <input type="radio" id="diverse" name="gender" value="diverse">
+                    <label for="diverse" class="gender-label">divers</label>
+                </li>
+            </ul>
+        </fieldset>
+
+        <fieldset>
+            <legend>Anschrift</legend>
+            <ul>
+                <li>
+                    <label for="address">Adresse:</label>
+                    <input type="address" id="address" name="address" />
+                </li>
+                
+                <li>
+                    <label for="address-number">Nummer:</label>
+                    <input type="address-number" id="address-number" name="address-number" pattern="[0-9]{3}[a-z]{1}" />
+                </li>
+                
+                <li>
+                    <label for="zip-code">PLZ:</label>
+                    <input type="zip-code" id="zip-code" name="zip-code" pattern="[0-9]{5}" title="Deutsche 5-stellige Postleitzahl" />
+                </li>
+                
+                <li>
+                    <label for="city">Ort:</label>
+                    <input type="city" id="city" name="city" />
+                </li>
+            </ul>
+        </fieldset>
+
+        <fieldset>
+            <legend>Kontakt</legend>
+            <ul>
+                <li>
+                    <label for="phone-number">Telefonnummer:</label>
+                    <input type="tel" id="phone-number" name="phone-number" pattern="[0-9]{5}/[0-9]{8}" />
+                </li>
+                
+                <li>
+                    <label for="e-mail">E-Mail:</label>
+                    <input type="email" id="e-mail" name="e-mail" />
+                </li>
+            </ul>
+        </fieldset>
+
+        <fieldset>
+            <legend>Soziale Medien</legend>
+            <ul>
+                <li>
+                    <label for="twitter">Twitter:</label>
+                    <input type="text" id="twitter" name="twitter" pattern="[A-Za-z0-9]+" />
+                </li>
+                <li>
+                    <label for="github">GitHub:</label>
+                    <input type="text" id="github" name="github" pattern="[A-Za-z0-9]+" />
+                </li>
+            </ul>
+        </fieldset>
+    </form>
+</body>
+</html>
