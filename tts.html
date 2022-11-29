@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text-to-speech API</title>
+    <style>
+        body{
+            background: linear-gradient(90deg, violet, purple);
+        }
+
+        .container{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .button{
+            width: 256px;
+            height: 256px;
+            text-align: center;
+            background-color: red;
+            color: white;
+            border-radius: 50%;
+            font-family: 'Montserrat', sans-serif;
+            font-size: larger;
+
+            /* Sets text to the center */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            user-select: none;
+        }
+
+        .button:hover{
+            cursor: pointer;
+        }
+
+        .button:active{
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="button" tabindex="0">
+            Press me!
+        </div>
+    </div>
+
+    <script>
+        const btn = document.querySelector('.button');
+
+        function press() {
+            const text = "J'am a man with fortune and J must seek the fortune. Andry Averies";
+
+            const utterance = new SpeechSynthesisUtterance(text);
+            utterance.lang = "en-GB";
+            utterance.pitch = 1;
+
+            window.speechSynthesis.speak(utterance)
+        }
+
+        const locked = false;
+
+        btn.addEventListener('click', press);
+        btn.addEventListener('keydown', (e) => {
+            if(e.key === 'Enter') {
+                press();
+            }
+        });
+    </script>
+</body>
+</html>
